@@ -1,0 +1,420 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Conference Demo 2024</title>
+</head>
+
+<body>
+
+    <div style="padding-bottom: 12px" class="c1">
+        <div class="c1-text">
+            <h1 style="font-size: 25px">
+                DEEP RECOMBINANT TRANSFORMER: ENHANCING LOOP
+                COMPATIBILITY IN DIGITAL MUSIC PRODUCTION
+            </h1>
+        </div>
+        <p>
+            <b>Abstract</b>
+            The widespread availability of music loops has revolutionized music production. However, combining loops
+            requires a nuanced understanding of musical compatibility that can be difficult to learn. This study
+            concentrates on the 'vertical problem' of loop compatibility, which pertains to layering different loops to
+            create a
+            harmonious blend. The main limitation to applying deep learning in this domain is the absence of a large,
+            high-quality, labeled dataset containing both positive and negative pairs. We solve this problem by
+            synthesizing high-quality audio from multi-track MIDI datasets containing independent instrument stems and
+            extracting loops as positive pairs. This provides models with instrument-level information when learning
+            compatibility. Previous works create negative samples by altering one of the loops in a positive pair to
+            make it incompatible -- e.g. tempo, key, phase shifts. We argue that altering basic loop characteristics to
+            create negative examples misleads the model to focus on superficial differences over true musical
+            incompatibility. Instead, we use AutoMashUpper for identifying incompatible
+            loops within the same tempo, key, and phase, thus providing more realistic negative pairs for training.
+            Creating a large dataset allows us to introduce and examine the application of Transformer architectures for
+            addressing vertical loop compatibility, achieving an 18.6% higher accuracy than previous state-of-the-art
+            models across multiple genres. Lastly, we perform extensive objective and subjective assessments
+            demonstrating our method’s effectiveness.
+        </p>
+
+    </div>
+
+    <div class="c1">
+        <h3 class="example-title">Jazz</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="Demo Content/Four/Four.mp3"></audio>            
+        </div>
+
+        <div class="example-c">
+            <div class="grid-container">
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        MTT (4 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT4_4_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT4_4_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT4_4_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT4_4_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        MTT (2 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT2_4_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT2_4_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT2_4_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/MTT2_4_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Short Chunk CNN Res
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/SCCNN_4_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/SCCNN_4_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/SCCNN_4_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/SCCNN_4_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name fourth-model">
+                        NLC (2 seconds)
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/NLC_4_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/NLC_4_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/NLC_4_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Four/NLC_4_Everything.mp3"></audio></div>
+
+                <!-- Repeat the above rows for as many entries as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="c1">
+        <h3 class="example-title">Electronic Pop</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="Demo Content/Five/Five.mp3"></audio>            
+        </div>
+
+        <div class="example-c">
+            <div class="grid-container">
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        MTT (4 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT4_5_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT4_5_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT4_5_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT4_5_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        MTT (2 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT2_5_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT2_5_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT2_5_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/MTT2_5_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Short Chunk CNN Res
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/SCCNN_5_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/SCCNN_5_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/SCCNN_5_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/SCCNN_5_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name fourth-model">
+                        NLC (2 seconds)
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/NLC_5_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/NLC_5_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/NLC_5_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Five/NLC_5_Everything.mp3"></audio></div>
+
+                <!-- Repeat the above rows for as many entries as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="c1">
+        <h3 class="example-title">Rock & Roll</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="Demo Content/One/One.mp3"></audio>
+        </div>
+
+        <div class="example-c">
+            <div class="grid-container">
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        MTT (4 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT4_1_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT4_1_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT4_1_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT4_1_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        MTT (2 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT2_1_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT2_1_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT2_1_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/MTT2_1_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Short Chunk CNN Res
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/One/SCCNN_1_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/SCCNN_1_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/SCCNN_1_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/SCCNN_1_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name fourth-model">
+                        NLC (2 seconds)
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/One/NLC_1_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/NLC_1_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/NLC_1_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/One/NLC_1_Everything.mp3"></audio></div>
+
+                <!-- Repeat the above rows for as many entries as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="c1">
+        <h3 class="example-title">Blues</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="Demo Content/Two/Two.mp3"></audio>            
+        </div>
+
+        <div class="example-c">
+            <div class="grid-container">
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        MTT (4 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT4_2_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT4_2_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT4_2_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT4_2_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        MTT (2 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT2_2_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT2_2_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT2_2_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/MTT2_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Short Chunk CNN Res
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/SCCNN_2_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/SCCNN_2_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/SCCNN_2_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/SCCNN_2_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name fourth-model">
+                        NLC (2 seconds)
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/NLC_2_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/NLC_2_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/NLC_2_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Two/NLC_2_Everything.mp3"></audio></div>
+
+                <!-- Repeat the above rows for as many entries as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="c1">
+        <h3 class="example-title">Funk</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="Demo Content/Three/Three.mp3"></audio>            
+        </div>
+
+        <div class="example-c">
+            <div class="grid-container">
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        MTT (4 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT4_3_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT4_3_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT4_3_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT4_3_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        MTT (2 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT2_3_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT2_3_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT2_3_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/MTT2_3_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Short Chunk CNN Res
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/SCCNN_3_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/SCCNN_3_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/SCCNN_3_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/SCCNN_3_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name fourth-model">
+                        NLC (2 seconds)
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/NLC_3_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/NLC_3_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/NLC_3_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Three/NLC_3_Everything.mp3"></audio></div>
+
+                <!-- Repeat the above rows for as many entries as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="c1">
+        <h3 class="example-title">Reggaeton Pop</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="Demo Content/Six/Six.mp3"></audio>            
+        </div>
+
+        <div class="example-c">
+            <div class="grid-container">
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        MTT (4 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT4_6_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT4_6_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT4_6_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT4_6_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        MTT (2 Attn Layers) 
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT2_6_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT2_6_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT2_6_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/MTT2_6_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Short Chunk CNN Res
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/SCCNN_6_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/SCCNN_6_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/SCCNN_6_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/SCCNN_6_Everything.mp3"></audio></div>
+
+                <div class="grid-item">
+                    <div class="model-name fourth-model">
+                        NLC (2 seconds)
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/NLC_6_MostComp.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/NLC_6_Bass.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/NLC_6_Drums.mp3"></audio></div>
+                <div class="grid-item"><audio controls src="Demo Content/Six/NLC_6_Everything.mp3"></audio></div>
+
+                <!-- Repeat the above rows for as many entries as needed -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
