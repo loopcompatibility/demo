@@ -104,7 +104,7 @@ h1{
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0px; /* Adjust space between cells */
     align-items: center;
   }
@@ -150,7 +150,15 @@ h1{
     padding-left: 5px;
     justify-content: start;
     background-color: #252525;
+  }
 
+   .query-loop-c2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #252525;
+    height: 100px;
+    color: white;
   }
 
   .query-audio{
