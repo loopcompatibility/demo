@@ -104,6 +104,13 @@ h1{
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px; /* Adjust space between cells */
+    align-items: center;
+  }
+
+.grid-container2 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0px; /* Adjust space between cells */
     align-items: center;

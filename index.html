@@ -9,60 +9,194 @@
 </head>
 
 <body>
-]    
+    ]
     <div style="padding-bottom: 12px" class="c1">
         <div class="c1-text">
             <h1 style="font-size: 25px">
-                Advanced Recombinant Transformer: Modeling Instrument-Level Loop Compatibility with Self-Supervised Acoustic Embeddings
+                Advanced Recombinant Transformer: Modeling Instrument-Level Loop Compatibility with Self-Supervised
+                Acoustic Embeddings
             </h1>
         </div>
         <p>
             <b>Abstract</b>
-            Vertical loop compatibility — deciding whether two instrument loops can be layered in a musically coherent way — has seen limited success, primarily due to the absence of a large-scale, high-fidelity, labeled dataset. We introduce the <strong>Advanced Recombinant Transformer (ART)</strong>. It renders studio-quality stems from multi-instrument MIDI to create aligned positive pairs, then mines matched-condition hard negatives using a frozen <strong>Deep Recombinant Transformer (DRT)</strong> scorer with calibrated thresholds based on a blinded musician audit. For representation, we replace log-mel features with frozen embeddings from <strong>MERT</strong> that capture timbral nuances and provide cues for higher-level musical structure. An order-invariant head then scores pairwise compatibility. Experimental results show a <strong>10.1% improvement</strong> in compatibility classification over the previous state-of-the-art. Extensive subjective tests (N=107) on production-grade human-composed loops find seamlessness and creativity ratings comparable to human performance.
+            Vertical loop compatibility — deciding whether two instrument loops can be layered in a musically coherent
+            way — has seen limited success, primarily due to the absence of a large-scale, high-fidelity, labeled
+            dataset. We introduce the <strong>Advanced Recombinant Transformer (ART)</strong>. It renders studio-quality
+            stems from multi-instrument MIDI to create aligned positive pairs, then mines matched-condition hard
+            negatives using a frozen <strong>Deep Recombinant Transformer (DRT)</strong> scorer with calibrated
+            thresholds based on a blinded musician audit. For representation, we replace log-mel features with frozen
+            embeddings from <strong>MERT</strong> that capture timbral nuances and provide cues for higher-level musical
+            structure. An order-invariant head then scores pairwise compatibility. Experimental results show a
+            <strong>10.1% improvement</strong> in compatibility classification over the previous state-of-the-art.
+            Extensive subjective tests (N=107) on production-grade human-composed loops find seamlessness and creativity
+            ratings comparable to human performance.
         </p>
 
     </div>
 
     <h2 class="query-loop-c2 example-title">Good Examples</h2>
 
-    <div class="c1">
-        <h3 class="example-title">Blues</h3>
+        <div class="c1">
+        <h3 class="example-title">Electronic</h3>
         <div class="query-loop-c">
             <h4 class="query-loop-text">Query Loop
             </h4>
-            <audio class="query-audio" controls src="good-examples/01/query-loop-01.wav"></audio>            
+            <audio class="query-audio" controls src="good-examples/05/ref-05.wav"></audio>
         </div>
 
-        <div class="example-c">
-            <div class="grid-container">
-                <div class="grid-header">Model</div>
-                <div class="grid-header">Top Match Mix</div>
 
+            <div class="example-c">
+            <div class="grid-container">
+                <!-- Headers -->
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <!-- Row 1 -->
                 <div class="grid-item">
                     <div class="model-name first-model">
-                    Advanced Recombinant Transformer
+                        Advanced Recombinant Transformer
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/01/art-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/art-match-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/art-bass-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/art-drums-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/art-full-mix-05.wav"></audio></div>
 
+                <!-- Row 2 -->
                 <div class="grid-item">
                     <div class="model-name second-model">
                         Deep Recombinant Transformer
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/01/drt-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/drt-match-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/drt-bass-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/drt-drums-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/drt-full-mix-05.wav"></audio></div>
 
+                <!-- Row 3 -->
                 <div class="grid-item">
                     <div class="model-name third-model">
                         Random Baseline
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/01/random-mix-01.wav"></audio></div>
-
-                <!-- Repeat the above rows for as many entries as needed -->
+                <div class="grid-item"><audio controls src="good-examples/05/random-match-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/random-bass-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/random-drums-mix-05.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/05/random-full-mix-05.wav"></audio></div>
             </div>
-
         </div>
+
+    </div>
+
+        <div class="c1">
+        <h3 class="example-title">Hip Hop</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="good-examples/04/ref-04.wav"></audio>
+        </div>
+
+            <div class="example-c">
+            <div class="grid-container">
+                <!-- Headers -->
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <!-- Row 1 -->
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        Advanced Recombinant Transformer
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="good-examples/04/art-match-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/art-bass-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/art-drums-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/art-full-mix-04.wav"></audio></div>
+
+                <!-- Row 2 -->
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        Deep Recombinant Transformer
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="good-examples/04/drt-match-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/drt-bass-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/drt-drums-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/drt-full-mix-04.wav"></audio></div>
+
+                <!-- Row 3 -->
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Random Baseline
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="good-examples/04/random-match-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/random-bass-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/random-drums-mix-04.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/04/random-full-mix-04.wav"></audio></div>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="c1">
+        <h3 class="example-title">Orchestral</h3>
+        <div class="query-loop-c">
+            <h4 class="query-loop-text">Query Loop
+            </h4>
+            <audio class="query-audio" controls src="good-examples/03/ref-03.wav"></audio>
+        </div>
+
+            <div class="example-c">
+            <div class="grid-container">
+                <!-- Headers -->
+                <div class="grid-header">Model</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
+
+                <!-- Row 1 -->
+                <div class="grid-item">
+                    <div class="model-name first-model">
+                        Advanced Recombinant Transformer
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="good-examples/03/art-match-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/art-bass-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/art-drums-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/art-full-mix-03.wav"></audio></div>
+
+                <!-- Row 2 -->
+                <div class="grid-item">
+                    <div class="model-name second-model">
+                        Deep Recombinant Transformer
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="good-examples/03/drt-match-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/drt-bass-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/drt-drums-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/drt-full-mix-03.wav"></audio></div>
+
+                <!-- Row 3 -->
+                <div class="grid-item">
+                    <div class="model-name third-model">
+                        Random Baseline
+                    </div>
+                </div>
+                <div class="grid-item"><audio controls src="good-examples/03/random-match-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/random-bass-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/random-drums-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/03/random-full-mix-03.wav"></audio></div>
+            </div>
+        </div>
+
     </div>
 
     <div class="c1">
@@ -70,180 +204,131 @@
         <div class="query-loop-c">
             <h4 class="query-loop-text">Query Loop
             </h4>
-            <audio class="query-audio" controls src="good-examples/02/query-loop-02.wav"></audio>            
+            <audio class="query-audio" controls src="good-examples/02/ref-02.wav"></audio>
         </div>
 
         <div class="example-c">
             <div class="grid-container">
+                <!-- Headers -->
                 <div class="grid-header">Model</div>
-                <div class="grid-header">Top Match Mix</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
 
+                <!-- Row 1 -->
                 <div class="grid-item">
                     <div class="model-name first-model">
-                    Advanced Recombinant Transformer
+                        Advanced Recombinant Transformer
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/02/art-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/art-match-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/art-bass-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/art-drums-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/art-full-mix-02.wav"></audio></div>
 
+                <!-- Row 2 -->
                 <div class="grid-item">
                     <div class="model-name second-model">
                         Deep Recombinant Transformer
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/02/drt-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/drt-match-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/drt-bass-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/drt-drums-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/drt-full-mix-02.wav"></audio></div>
 
+                <!-- Row 3 -->
                 <div class="grid-item">
                     <div class="model-name third-model">
                         Random Baseline
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/02/random-mix-02.wav"></audio></div>
-
-                <!-- Repeat the above rows for as many entries as needed -->
+                <div class="grid-item"><audio controls src="good-examples/02/random-match-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/random-bass-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/random-drums-mix-02.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/02/random-full-mix-02.wav"></audio></div>
             </div>
-
         </div>
+
     </div>
 
-    <div class="c1">
-        <h3 class="example-title">Orchestral</h3>
+        <div class="c1">
+        <h3 class="example-title">Blues</h3>
         <div class="query-loop-c">
             <h4 class="query-loop-text">Query Loop
             </h4>
-            <audio class="query-audio" controls src="good-examples/03/query-loop-03.wav"></audio>            
+            <audio class="query-audio" controls src="good-examples/01/ref-01.wav"></audio>
         </div>
+
+
 
         <div class="example-c">
             <div class="grid-container">
+                <!-- Headers -->
                 <div class="grid-header">Model</div>
-                <div class="grid-header">Top Match Mix</div>
+                <div class="grid-header">Top Match</div>
+                <div class="grid-header">Bass</div>
+                <div class="grid-header">Drums</div>
+                <div class="grid-header">Full Mix</div>
 
+                <!-- Row 1 -->
                 <div class="grid-item">
                     <div class="model-name first-model">
-                    Advanced Recombinant Transformer
+                        Advanced Recombinant Transformer
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/03/art-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/art-match-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/art-bass-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/art-drums-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/art-full-mix-01.wav"></audio></div>
 
+                <!-- Row 2 -->
                 <div class="grid-item">
                     <div class="model-name second-model">
                         Deep Recombinant Transformer
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/03/drt-mix-03.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/drt-match-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/drt-bass-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/drt-drums-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/drt-full-mix-01.wav"></audio></div>
 
+                <!-- Row 3 -->
                 <div class="grid-item">
                     <div class="model-name third-model">
                         Random Baseline
                     </div>
                 </div>
-                <div class="grid-item"><audio controls src="good-examples/03/random-mix-03.wav"></audio></div>
-
-                <!-- Repeat the above rows for as many entries as needed -->
+                <div class="grid-item"><audio controls src="good-examples/01/random-match-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/random-bass-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/random-drums-mix-01.wav"></audio></div>
+                <div class="grid-item"><audio controls src="good-examples/01/random-full-mix-01.wav"></audio></div>
             </div>
-
-        </div>
-    </div>
-
-    <div class="c1">
-        <h3 class="example-title">Hip Hop</h3>
-        <div class="query-loop-c">
-            <h4 class="query-loop-text">Query Loop
-            </h4>
-            <audio class="query-audio" controls src="good-examples/04/query-loop-04.wav"></audio>            
         </div>
 
-        <div class="example-c">
-            <div class="grid-container">
-                <div class="grid-header">Model</div>
-                <div class="grid-header">Top Match Mix</div>
 
-                <div class="grid-item">
-                    <div class="model-name first-model">
-                    Advanced Recombinant Transformer
-                    </div>
-                </div>
-                <div class="grid-item"><audio controls src="good-examples/04/art-mix-04.wav"></audio></div>
-
-                <div class="grid-item">
-                    <div class="model-name second-model">
-                        Deep Recombinant Transformer
-                    </div>
-                </div>
-                <div class="grid-item"><audio controls src="good-examples/04/drt-mix-04.wav"></audio></div>
-
-                <div class="grid-item">
-                    <div class="model-name third-model">
-                        Random Baseline
-                    </div>
-                </div>
-                <div class="grid-item"><audio controls src="good-examples/04/random-mix-04.wav"></audio></div>
-
-                <!-- Repeat the above rows for as many entries as needed -->
-            </div>
-
-        </div>
-    </div>
-
-    <div class="c1">
-        <h3 class="example-title">Electronic</h3>
-        <div class="query-loop-c">
-            <h4 class="query-loop-text">Query Loop
-            </h4>
-            <audio class="query-audio" controls src="good-examples/05/query-loop-05.wav"></audio>            
-        </div>
-
-        <div class="example-c">
-            <div class="grid-container">
-                <div class="grid-header">Model</div>
-                <div class="grid-header">Top Match Mix</div>
-
-                <div class="grid-item">
-                    <div class="model-name first-model">
-                    Advanced Recombinant Transformer
-                    </div>
-                </div>
-                <div class="grid-item"><audio controls src="good-examples/05/art-mix-05.wav"></audio></div>
-
-                <div class="grid-item">
-                    <div class="model-name second-model">
-                        Deep Recombinant Transformer
-                    </div>
-                </div>
-                <div class="grid-item"><audio controls src="good-examples/05/drt-mix-05.wav"></audio></div>
-
-                <div class="grid-item">
-                    <div class="model-name third-model">
-                        Random Baseline
-                    </div>
-                </div>
-                <div class="grid-item"><audio controls src="good-examples/05/random-mix-05.wav"></audio></div>
-
-                <!-- Repeat the above rows for as many entries as needed -->
-            </div>
-
-        </div>
     </div>
 
     <h2 class="query-loop-c2 example-title">Bad Examples</h2>
-    
-    
+
+
     <div class="c1">
         <h3 class="example-title">Orchestral</h3>
         <div class="query-loop-c">
             <h4 class="query-loop-text">Query Loop
             </h4>
-            <audio class="query-audio" controls src="bad-examples/01/query-loop-01.wav"></audio>            
+            <audio class="query-audio" controls src="bad-examples/01/query-loop-01.wav"></audio>
         </div>
 
         <div class="example-c">
-            <div class="grid-container">
+            <div class="grid-container2">
                 <div class="grid-header">Model</div>
                 <div class="grid-header">Top Match Mix</div>
 
                 <div class="grid-item">
                     <div class="model-name first-model">
-                    Advanced Recombinant Transformer
+                        Advanced Recombinant Transformer
                     </div>
                 </div>
                 <div class="grid-item"><audio controls src="bad-examples/01/art-mix-01.wav"></audio></div>
@@ -254,22 +339,22 @@
         </div>
     </div>
 
-        <div class="c1">
+    <div class="c1">
         <h3 class="example-title">Reggaeton Pop</h3>
         <div class="query-loop-c">
             <h4 class="query-loop-text">Query Loop
             </h4>
-            <audio class="query-audio" controls src="bad-examples/02/query-loop-02.wav"></audio>            
+            <audio class="query-audio" controls src="bad-examples/02/query-loop-02.wav"></audio>
         </div>
 
         <div class="example-c">
-            <div class="grid-container">
+            <div class="grid-container2">
                 <div class="grid-header">Model</div>
                 <div class="grid-header">Top Match Mix</div>
 
                 <div class="grid-item">
                     <div class="model-name first-model">
-                    Advanced Recombinant Transformer
+                        Advanced Recombinant Transformer
                     </div>
                 </div>
                 <div class="grid-item"><audio controls src="bad-examples/02/art-mix-02.wav"></audio></div>
@@ -280,22 +365,22 @@
         </div>
     </div>
 
-        <div class="c1">
+    <div class="c1">
         <h3 class="example-title">Classical</h3>
         <div class="query-loop-c">
             <h4 class="query-loop-text">Query Loop
             </h4>
-            <audio class="query-audio" controls src="bad-examples/03/query-loop-03.wav"></audio>            
+            <audio class="query-audio" controls src="bad-examples/03/query-loop-03.wav"></audio>
         </div>
 
         <div class="example-c">
-            <div class="grid-container">
+            <div class="grid-container2">
                 <div class="grid-header">Model</div>
                 <div class="grid-header">Top Match Mix</div>
 
                 <div class="grid-item">
                     <div class="model-name first-model">
-                    Advanced Recombinant Transformer
+                        Advanced Recombinant Transformer
                     </div>
                 </div>
                 <div class="grid-item"><audio controls src="bad-examples/03/art-mix-03.wav"></audio></div>
